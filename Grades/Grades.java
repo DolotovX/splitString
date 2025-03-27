@@ -42,4 +42,15 @@ public class Grades {
         }
         System.out.println(resultString);
     }
+
+    public String serializeGrades(String[] grades) {
+
+        for (String name: grades) {
+            String[] dataStudent = name.split(" ");
+            String list = String.join(",",dataStudent[0],dataStudent[1],dataStudent[2],dataStudent[4]);
+            String result = String.join(";",list);
+            return result;
+        }
+        return "";
+    }
 }
